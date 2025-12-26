@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<!--Originally built as a simple Digital Clock example.
+Enhanced into a Luxury Clock with gradient background,
+analog clock, pendulum animation, and modern UI design.-->
+  <title>Luxury Clock</title>
+  <link rel="stylesheet" href="clock.css">
+</head>
+<body>
+
+  <div class="clock-container">
+
+    <!-- Analog Clock -->
+    <div class="analog-clock">
+      <div class="hand hour" id="hour"></div>
+      <div class="hand minute" id="minute"></div>
+      <div class="hand second" id="second"></div>
+      <div class="center-dot"></div>
+    </div>
+
+    <!-- Pendulum -->
+    <div class="pendulum">
+      <div class="rod"></div>
+      <div class="bob"></div>
+    </div>
+
+    <!-- Digital Clock -->
+    <h1 id="clock"></h1>
+    <p id="date"></p>
+
+  </div>
+
+  <script src="clock.js"></script>
+</body>
+</html>

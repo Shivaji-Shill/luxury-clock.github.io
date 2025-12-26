@@ -1,0 +1,113 @@
+/*
+This project started as a basic digital clock.
+The design has been upgraded to a luxury-style clock UI
+using gradient backgrounds, analog clock styling,
+and pendulum animation for a premium visual experience.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #e1e425, #0b99ec);
+  font-family: 'Courier New', monospace;
+}
+
+.clock-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* DIGITAL CLOCK */
+#clock {
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+#date {
+  font-size: 22px;
+  opacity: 0.9;
+}
+
+/* ANALOG CLOCK */
+.analog-clock {
+  width: 220px;
+  height: 220px;
+  border: 8px solid white;
+  border-radius: 50%;
+  position: relative;
+  background: radial-gradient(circle, #f5f4f1 60%, #000000);
+}
+
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  transform: translateX(-50%);
+}
+
+.hour {
+  height: 50px;
+  width: 6px;
+  background: black;
+}
+
+.minute {
+  height: 70px;
+  width: 4px;
+  background: black;
+}
+
+.second {
+  height: 90px;
+  width: 2px;
+  background: red;
+}
+
+.center-dot {
+  width: 12px;
+  height: 12px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* PENDULUM */
+.pendulum {
+  margin-top: 20px;
+  position: relative;
+  height: 120px;
+  animation: swing 2s ease-in-out infinite alternate;
+  transform-origin: top center;
+}
+
+.rod {
+  width: 4px;
+  height: 80px;
+  background: white;
+  margin: auto;
+}
+
+.bob {
+  width: 30px;
+  height: 30px;
+  background: rgb(12, 11, 0);
+  border-radius: 50%;
+  margin: auto;
+}
+
+@keyframes swing {
+  from { transform: rotate(-20deg); }
+  to   { transform: rotate(20deg); }
+}
